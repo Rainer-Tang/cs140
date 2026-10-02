@@ -1,0 +1,25 @@
+#page_title {
+    font-size: xx-large;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#2767d8;
+}
+.intro{ 
+    font-family:fantasy;
+}
+header {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+        background-color: #c4e3ac;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-size: 10;
+}
+
+main {
+    color: #9f19e6;
+}
+
+footer {
+    color:#1e45e1;
+}
