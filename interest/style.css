@@ -6,14 +6,15 @@
 .intro{ 
     font-family:fantasy;
 }
-header {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
 
+span_color {
+    color:crimson;
+    font-weight: bold;
+}
 body {
         background-color: #c4e3ac;
         font-family:Georgia, 'Times New Roman', Times, serif;
-        font-size: 10;
+        font-size: medium;
 }
 
 main {
