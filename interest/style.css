@@ -7,10 +7,11 @@
     font-family:fantasy;
 }
 
-span_color {
+.span_color{
     color:crimson;
-    font-weight: bold;
+    font-weight: bolder;
 }
+
 body {
         background-color: #c4e3ac;
         font-family:Georgia, 'Times New Roman', Times, serif;
