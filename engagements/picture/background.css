@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(background-texture.avif) repeat blue;
+}
+
+main{
+    background: url(RedFlowerSmall.jpg) no-repeat center;
+    background-size: 50px;
+}
+
+.pipeline {
+    width: 200px;
+}
+
+.surfspots {
+    list-style-image: url(dot.png);
+}
