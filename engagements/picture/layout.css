@@ -1,0 +1,84 @@
+header {
+    font-family: cursive; 
+    color: aliceblue;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px rgba(110, 20, 90, 0.9);
+    height: 80px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 10px;
+    color: white;
+    background:rgb(164, 19, 62) center fixed;
+    font-weight: bolder;
+}
+nav a:hover {
+    background-color: rgb(210, 40, 85);
+    color: aliceblue;
+}
+.wrapper {
+    width:100%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: url(bakery.png) repeat fixed;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+
+main {
+    border-radius: 20px;
+    overflow: hidden;
+}
+.JapaneseCheesecake {
+
+    float: left;
+    border: thick solid rgb(161, 24, 24);
+    border-radius: 10px;   
+    padding: 8px;
+    text-align: center;
+    background: aliceblue;
+    margin-right: 20px;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+.JapaneseCheesecake img {
+    width: 100%;
+}
+
+.title {
+    color:aliceblue;
+}
+.ingredient {
+    border: thick solid rgb(161, 24, 24);
+    border-radius: 10px;
+    padding: 20px;
+    background: aliceblue;
+    box-shadow: 4px 4px 10px purple;
+}
+
+main p {
+border: thick solid rgb(161, 24, 24);
+    border-radius: 10px;
+    padding: 12px;
+    line-height: 1.6;
+    font-size: 1rem;
+    background: aliceblue;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px 10px purple;
+}
+
+footer {
+    color: aliceblue;
+    font-family: cursive;
+}
