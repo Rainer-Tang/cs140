@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+</head>
+<body>
+    <header>
+    <h1>Rainer's Web Design Site</h1>
+    </header>
+
+
+    <main>
+    <form action="formprocessing.html" method="get">
+    <div class="form-row">
+        <label for="personname">Full Name</label>
+    <input id="personname" type="text" name="fullname" placeholder="Full Name">
+    </div>
+
+    <div class="form-row">
+        <label for="email">Email</label>
+    <input type="text" name="email">
+    </div>
+
+    <div class="form-row">
+        <label for="password">Password</label>
+    <input type="password" name="pass">
+    </div>
+
+    <div class="form-row">
+    <input type="submit">
+    </div>
+
+    </form>
+    <p>1. "Action" defines the location of the server side script or URL where the form data would be submitted <br>
+    2. "Method" defines the HTTP method of transmission, usually GET for adding parameters to the URL and POST for passing the data in the request body in a secure way.<br>
+    3. The GET method is a visible one and adds query parameters to the URL; the data passed through POST is hidden in the request body and has no restrictions regarding its length. <br>
+    4. The distinction is that preset values give active default data sent to the server, whereas placeholders are temporary visual prompts which go away when typing. Textbox:use 'value' attribute. Textarea:use textarea tag. Selectbox: use selected option of the option tag. Checkbox: Add checked to preset the box, placeholder not supported. Radio button: Add checked to pre-select the option, placeholder not supported.<br>
+    5. There are 12 new input types (color, date, datetime-local, email, month, number, range, search, tel, time, url, and week), and also four new elements (< datalist>, < output>, < meter>, and < progress>) in HTML5, and I used email and date in my form.</p>
+    </main>
+    <footer>
+    <p>&copy; 2026 Rainer Tang</p>
+    </footer>
+    
+</body>
+</html>
