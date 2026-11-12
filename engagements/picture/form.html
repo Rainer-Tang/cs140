@@ -3,41 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>From</title>
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
 </head>
 <body>
     <header>
     <h1>Rainer's Web Design Site</h1>
     </header>
 
-
     <main>
-    <form action="formprocessing.html" method="get">
-    <div class="form-row">
+    <form action="formprocessing.html" method="post">
+        <fieldset>
+        <legend>Account</legend>
+        <div class="form-row">
         <label for="personname">Full Name</label>
     <input id="personname" type="text" name="fullname" placeholder="Full Name">
     </div>
 
     <div class="form-row">
         <label for="email">Email</label>
-    <input type="text" name="email">
+    <input type="email" name="email" id="email" value="rainer@byuh.edu">
+    </div>
+
+    <div class="form-row">
+        <label for="bdate">Birthday</label>
+        <input type="date" name="bdate" id="bdate">
     </div>
 
     <div class="form-row">
         <label for="password">Password</label>
-    <input type="password" name="pass">
+    <input type="password" name="pass" id="password">
     </div>
 
     <div class="form-row">
-    <input type="submit">
+        <label for="state">State</label>
+        <select name="state" id="state">
+            <option value="blank">-----------</option>
+            <option value="CA">California</option>
+            <option value="HI">Hawaii</option>
+            <option value="UT">Utah</option>
+        </select>
     </div>
-
+    <div class="check-row">
+        <div class="spacer"></div>
+        <label><input type="checkbox" name="remember">Remember Me?</label>
+    </div>
+        <div class="check-row">
+        <div class="spacer">Gender:</div>
+        <label><input type="radio" name="gender" value="male">Male</label>
+        <label><input type="radio" name="gender" value="female">Female</label>
+        </div>
+        <div class="form-row">
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments"></textarea>
+        </div>
+    <div class="form-row">
+        <div class="spacer"></div>
+    <input type="submit" value="Sign Up">
+    </div>
+    </fieldset>
     </form>
     <p>1. "Action" defines the location of the server side script or URL where the form data would be submitted <br>
     2. "Method" defines the HTTP method of transmission, usually GET for adding parameters to the URL and POST for passing the data in the request body in a secure way.<br>
     3. The GET method is a visible one and adds query parameters to the URL; the data passed through POST is hidden in the request body and has no restrictions regarding its length. <br>
     4. The distinction is that preset values give active default data sent to the server, whereas placeholders are temporary visual prompts which go away when typing. Textbox:use 'value' attribute. Textarea:use textarea tag. Selectbox: use selected option of the option tag. Checkbox: Add checked to preset the box, placeholder not supported. Radio button: Add checked to pre-select the option, placeholder not supported.<br>
     5. There are 12 new input types (color, date, datetime-local, email, month, number, range, search, tel, time, url, and week), and also four new elements (< datalist>, < output>, < meter>, and < progress>) in HTML5, and I used email and date in my form.</p>
+    
+    <p>
+    1. I can style the form with modern CSS layout like Flexbox or Grid, and the standard block formatting techniques.<br>
+    2. Flex is better because aligning things in rows, label inputs becomes easy with flex.<br>
+    3. A good mobile form will have a stacked form, larger touch targets, proper HTML input types, and fewer required fields.
+
+    </p>
     </main>
     <footer>
     <p>&copy; 2026 Rainer Tang</p>
