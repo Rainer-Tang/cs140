@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="proform.css">
+</head>
+<body>
+    <header>
+    <h1>Account Registration</h1>
+    </header>
+
+    <main>
+    <form action="#" method="post">
+        <fieldset>
+        <legend>Create Your Account</legend>
+
+        <div class="form-row">
+        <label for="username">Username</label>
+    <input id="username" type="text" name="username" placeholder="User Name" required>
+    </div>
+
+    <div class="form-row">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+    </div>
+
+    <div class="form-row">
+        <label for="email">Email</label>
+    <input type="email" name="email" id="email" value="a@gmail.com" required>
+    </div>
+
+    <div class="form-row">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="bdate" id="dob" required>
+    </div>
+
+    <div class="form-row">
+        <label for="type">Account Type</label>
+        <select name="type" id="type">
+            <option value="blank">-----------</option>
+            <option value="personal">Personal</option>
+            <option value="business">Business</option>
+            <option value="student">Student</option>
+        </select>
+    </div>
+
+    <div class="radio-row">
+        <label>Visibility</label>
+        <div class="spacer">
+        <label><input type="radio" name="visibility" value="public">Public</label>
+        <label><input type="radio" name="visibility" value="private">Private</label>
+        </div>
+    </div>
+
+        <div class="form-row">
+            <label for="address">Address</label>
+            <textarea name="address" id="address" rows="3" placeholder="Enter your address"></textarea>
+        </div>
+    <div class="checkbox">
+        <div class="spacer"></div>
+        <label for="terms">
+            <input type="checkbox" id="terms" name="terms" required> By checking that box I agree to the terms of service and private policy 
+        </label>
+    </div>
+
+    <div class="submit">
+        <button type="submit">Register</button>
+    </div>
+    </fieldset>
+    </form>
+    </main>
+
+    <footer>
+    <p>&copy; 2026 Rainer Tang</p>
+    </footer>
+    
+</body>
+</html>
