@@ -12,12 +12,12 @@
     </header>
 
     <main>
-    <form action="formprocessing.html" method="post">
+    <form action="formprocessing.html" method="post" id="myform">
         <fieldset>
         <legend>Account</legend>
         <div class="form-row">
-        <label for="personname">Full Name</label>
-    <input id="personname" type="text" name="fullname" placeholder="Full Name">
+        <label for="fullname">Full Name</label>
+    <input id="fullname" type="text" name="fullname" placeholder="Full Name">
     </div>
 
     <div class="form-row">
@@ -79,6 +79,38 @@
     <footer>
     <p>&copy; 2026 Rainer Tang</p>
     </footer>
-    
+    <script>
+        document.getElementById('myform').addEventListener('submit', function(event){
+            event.preventDefault();
+            alert("Form Submitted");
+
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pass').value;
+            const age = document.getElementById('bdate').value;
+
+            if(!fullname || !email) {
+                a;ert("You need a name and email");
+                return;
+            }
+
+            const formData = {
+                name: fullname,
+                email: email,
+                password: password,
+                age: age
+            };
+
+        console.log(formData);
+        });
+    </script>
+
+    <p>
+        1.JavaScript is a high-level, interpreted programming language which is mainly used to introduce interactive features to the web page, both at the client-side and at the server-side<br>
+        2. JavaScript can be executed directly in the browser or on the server as well as a standalone runtime environment with the help of an engine such as Node.js<br>
+        3.jQuery is a fast and comprehensive library that makes it easy to manipulate HTML DOM elements and handle events, although not in great use anymore for new projects.<br>
+        4.React is generally known to be the most popular JavaScript library in front-end development today.<br>
+        5.Event.preventDefault() is used to prevent default form submission to perform client-side validation or to make an asynchronous request with the help of JavaScript without reloading the page.
+    </p>
 </body>
 </html>
