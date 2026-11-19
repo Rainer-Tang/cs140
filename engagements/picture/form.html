@@ -86,7 +86,7 @@
 
             const fullname = document.getElementById('fullname').value;
             const email = document.getElementById('email').value;
-            const password = document.getElementById('pass').value;
+            const password = document.getElementById('password').value;
             const age = document.getElementById('bdate').value;
 
             if(!fullname || !email) {
@@ -102,6 +102,20 @@
             };
 
         console.log(formData);
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "submit.json", true);
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.onreadystatechange = function (){
+            if (xhr.readyState ===4 && xhr.status === 200) {
+                message = document.getElementById('message');
+                const response = JSON.parse(xhr.responseText);
+                message.textContent = response.message;
+            } else if (xhr.readyState === 4) {
+                alert('Error submitting form.');
+            }
+        }
+        xhr.send(JSON.stringify(formData));
+        alert(`Success: ${firstname} ${lastname}`);
         });
     </script>
 
@@ -111,6 +125,13 @@
         3.jQuery is a fast and comprehensive library that makes it easy to manipulate HTML DOM elements and handle events, although not in great use anymore for new projects.<br>
         4.React is generally known to be the most popular JavaScript library in front-end development today.<br>
         5.Event.preventDefault() is used to prevent default form submission to perform client-side validation or to make an asynchronous request with the help of JavaScript without reloading the page.
+    </p>
+
+    <p>
+        1. AJAX is a web development technique which allows sending and fetching of data by the web pages from a server without reloading the whole page.<br>
+2. Placing your JavaScript code in a separate file helps in separating concerns, caching by the browser, code reduction and reusability.<br>
+3. To debug your JavaScript code, you check for runtime errors in the console or set up breakpoints in the sources panel, and you get the line number of the error right next to it.<br>
+4. The form IDs in your HTML and the JavaScript selectors should match so that there are no reference errors, and your console should be clear of red errors. <br>
     </p>
 </body>
 </html>
