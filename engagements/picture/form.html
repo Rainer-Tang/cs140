@@ -12,126 +12,34 @@
     </header>
 
     <main>
-    <form action="formprocessing.html" method="post" id="myform">
-        <fieldset>
-        <legend>Account</legend>
-        <div class="form-row">
-        <label for="fullname">Full Name</label>
-    <input id="fullname" type="text" name="fullname" placeholder="Full Name">
-    </div>
+    <div id="message"></div>
+    <form action="formprocessing.html" method="post" id="myForm">
+    First Name: <input id="firstName" type="text" name="firstName" placeholder="First Name"><br>
+    Last Name<input id="lastName" type="text" name="lastName" placeholder="Last Name"><br>
+    Password: <input type="password" name="pass" id="password"><br>
+    Remember Me: <input type="checkbox" name="remember" checked id="remember"><br>
+    Age: <input type="number" name="age" id="age"><br>
+    Birth Date: <input type="date" name="birthDate" id="birthDate"><br>
+    Class:
+    <input type="radio" name="class" value="freshman">Freshman<br>
+    <input type="radio" name="class" value="sophomore">Sophomore<br>
+    <input type="radio" name="class" value="junior">Junior<br>
+    <input type="radio" name="class" value="senior">Senior<br>
 
-    <div class="form-row">
-        <label for="email">Email</label>
-    <input type="email" name="email" id="email" value="rainer@byuh.edu">
-    </div>
-
-    <div class="form-row">
-        <label for="bdate">Birthday</label>
-        <input type="date" name="bdate" id="bdate">
-    </div>
-
-    <div class="form-row">
-        <label for="password">Password</label>
-    <input type="password" name="pass" id="password">
-    </div>
-
-    <div class="form-row">
-        <label for="state">State</label>
-        <select name="state" id="state">
-            <option value="blank">-----------</option>
+    State:<select name="state" id="state">
+            <option value="blank" disabled selected>Make Selection</option>
             <option value="CA">California</option>
             <option value="HI">Hawaii</option>
             <option value="UT">Utah</option>
-        </select>
-    </div>
-    <div class="check-row">
-        <div class="spacer"></div>
-        <label><input type="checkbox" name="remember">Remember Me?</label>
-    </div>
-        <div class="check-row">
-        <div class="spacer">Gender:</div>
-        <label><input type="radio" name="gender" value="male">Male</label>
-        <label><input type="radio" name="gender" value="female">Female</label>
-        </div>
-        <div class="form-row">
-            <label for="comments">Comments</label>
-            <textarea name="comments" id="comments"></textarea>
-        </div>
-    <div class="form-row">
-        <div class="spacer"></div>
-    <input type="submit" value="Sign Up">
-    </div>
-    </fieldset>
+        </select><br>
+    <input type="submit">
     </form>
-    <p>1. "Action" defines the location of the server side script or URL where the form data would be submitted <br>
-    2. "Method" defines the HTTP method of transmission, usually GET for adding parameters to the URL and POST for passing the data in the request body in a secure way.<br>
-    3. The GET method is a visible one and adds query parameters to the URL; the data passed through POST is hidden in the request body and has no restrictions regarding its length. <br>
-    4. The distinction is that preset values give active default data sent to the server, whereas placeholders are temporary visual prompts which go away when typing. Textbox:use 'value' attribute. Textarea:use textarea tag. Selectbox: use selected option of the option tag. Checkbox: Add checked to preset the box, placeholder not supported. Radio button: Add checked to pre-select the option, placeholder not supported.<br>
-    5. There are 12 new input types (color, date, datetime-local, email, month, number, range, search, tel, time, url, and week), and also four new elements (< datalist>, < output>, < meter>, and < progress>) in HTML5, and I used email and date in my form.</p>
-    
-    <p>
-    1. I can style the form with modern CSS layout like Flexbox or Grid, and the standard block formatting techniques.<br>
-    2. Flex is better because aligning things in rows, label inputs becomes easy with flex.<br>
-    3. A good mobile form will have a stacked form, larger touch targets, proper HTML input types, and fewer required fields.
-
-    </p>
     </main>
+
     <footer>
     <p>&copy; 2026 Rainer Tang</p>
     </footer>
-    <script>
-        document.getElementById('myform').addEventListener('submit', function(event){
-            event.preventDefault();
-            alert("Form Submitted");
+    <script src="formprocessing.js"></script>
 
-            const fullname = document.getElementById('fullname').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const age = document.getElementById('bdate').value;
-
-            if(!fullname || !email) {
-                a;ert("You need a name and email");
-                return;
-            }
-
-            const formData = {
-                name: fullname,
-                email: email,
-                password: password,
-                age: age
-            };
-
-        console.log(formData);
-        const xhr = new XMLHttpRequest();
-        xhr.open("GET", "submit.json", true);
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.onreadystatechange = function (){
-            if (xhr.readyState ===4 && xhr.status === 200) {
-                message = document.getElementById('message');
-                const response = JSON.parse(xhr.responseText);
-                message.textContent = response.message;
-            } else if (xhr.readyState === 4) {
-                alert('Error submitting form.');
-            }
-        }
-        xhr.send(JSON.stringify(formData));
-        alert(`Success: ${firstname} ${lastname}`);
-        });
-    </script>
-
-    <p>
-        1.JavaScript is a high-level, interpreted programming language which is mainly used to introduce interactive features to the web page, both at the client-side and at the server-side<br>
-        2. JavaScript can be executed directly in the browser or on the server as well as a standalone runtime environment with the help of an engine such as Node.js<br>
-        3.jQuery is a fast and comprehensive library that makes it easy to manipulate HTML DOM elements and handle events, although not in great use anymore for new projects.<br>
-        4.React is generally known to be the most popular JavaScript library in front-end development today.<br>
-        5.Event.preventDefault() is used to prevent default form submission to perform client-side validation or to make an asynchronous request with the help of JavaScript without reloading the page.
-    </p>
-
-    <p>
-        1. AJAX is a web development technique which allows sending and fetching of data by the web pages from a server without reloading the whole page.<br>
-2. Placing your JavaScript code in a separate file helps in separating concerns, caching by the browser, code reduction and reusability.<br>
-3. To debug your JavaScript code, you check for runtime errors in the console or set up breakpoints in the sources panel, and you get the line number of the error right next to it.<br>
-4. The form IDs in your HTML and the JavaScript selectors should match so that there are no reference errors, and your console should be clear of red errors. <br>
-    </p>
 </body>
 </html>
